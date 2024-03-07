@@ -1,4 +1,4 @@
-import styled from "styled-component";
+import styled from "styled-components";
 
 // Componente funcional Header
 const Header = (props) => {

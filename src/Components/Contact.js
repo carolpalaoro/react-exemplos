@@ -1,9 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
 // Componente funcional Contact
-import styled, { keyframes } from "styled-components";
-
-// Componente funcional Contact
 const Contact = () => {
   return (
     <Container>
