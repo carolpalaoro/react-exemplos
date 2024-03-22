@@ -65,8 +65,8 @@ function MyForm() {
                 <section>
                     <h1>Inscreva-se</h1>
 
-{/*Formulário com campos controladospelo hook useForm */}
-<form on Submit={handleSubmit(onSubmit)}>
+    {/*Formulário com campos controladospelo hook useForm */}
+    <form on Submit={handleSubmit(onSubmit)}>
 
     {/*Campo Nome */}
     <div className='form flex'>
@@ -94,8 +94,8 @@ function MyForm() {
         {errors.lastName && <span className='error-message'>{errors.lastName.message} </span>}
     </div>
 
- {/*Campo E-mail */}
- <div className='form flex'>
+    {/*Campo E-mail */}
+    <div className='form flex'>
         <label htmlFor='email'>E-mail</label>
         <input 
         {...register("email", generateErrorMessage("Email"))}
@@ -108,7 +108,7 @@ function MyForm() {
     </div>
 
     {/*Campo Senha */}
- <div className='form flex'>
+    <div className='form flex'>
         <label htmlFor='password'>Senha</label>
         <div className="password-input-container">
         <input 
@@ -119,16 +119,16 @@ function MyForm() {
         type={status.showPassword ? 'text' : 'password'}
         className={errors.password ? 'error' : ''}
         />
-    
-<button
-type="button" //Define o tipo do botão como "button" para evitar comportamento padrão de envio de formulário
-className='password-toggle' // Adiciona a classe CSS 'password-toggle' para estilização específica
-onClick={() => setStatus({ ...status, showPassword: !status.showPassword })}
-//Define a função de clique que atualiza o estado 'status', alternando o valor de 'showPassword'
->
+
+    <button
+    type="button" //Define o tipo do botão como "button" para evitar comportamento padrão de envio de formulário
+    className='password-toggle' // Adiciona a classe CSS 'password-toggle' para estilização específica
+    onClick={() => setStatus({ ...status, showPassword: !status.showPassword })}
+    //Define a função de clique que atualiza o estado 'status', alternando o valor de 'showPassword'
+    >
     {status.showPassword ? <i className="fas fa-eye"></i> : <i className="fas fa-eye-slash" ></i>}
     {/* Renderiza condicionalmente um ícone de olho aberto ou fechado com base no valor de 'showPassword' */}
-</button> 
+    </button> 
 
         </div>
         {errors.password && <span className='error-message'>{errors.password.message}</span>}
