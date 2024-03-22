@@ -84,26 +84,26 @@ function MyForm() {
     {/*Campo Sobrenome */}
     <div className='form flex'>
         <label htmlFor='sobrenome'>Sobrenome</label>
-        <input 
-        {...register("lastName", generateErrorMessage("Sobrenome"))}
-        placeholder="Sobrenome"
-        id='sobrenome'
-        autoComplete='off'
-        className={errors.lastName ? 'error' : ''}
-        />
+            <input 
+            {...register("lastName", generateErrorMessage("Sobrenome"))}
+            placeholder="Sobrenome"
+            id='sobrenome'
+            autoComplete='off'
+            className={errors.lastName ? 'error' : ''}
+            />
         {errors.lastName && <span className='error-message'>{errors.lastName.message} </span>}
     </div>
 
     {/*Campo E-mail */}
     <div className='form flex'>
         <label htmlFor='email'>E-mail</label>
-        <input 
-        {...register("email", generateErrorMessage("Email"))}
-        placeholder="E-mail"
-        id='email'
-        autoComplete='off'
-        className={errors.email ? 'error' : ''}
-        />
+            <input 
+            {...register("email", generateErrorMessage("Email"))}
+            placeholder="E-mail"
+            id='email'
+            autoComplete='off'
+            className={errors.email ? 'error' : ''}
+            />
         {errors.email && <span className='error-message'>{errors.email.message} </span>}
     </div>
 
