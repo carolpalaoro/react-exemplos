@@ -71,10 +71,10 @@ function MyForm() {
 
                             {/* Campo Nome */}
                             <div className='form flex'>
-                                <label htmlFor='name'>Nome</label>
+                                <label htmlFor='name'>Email</label>
                                 <input
                                     {...register("firstName", generateErrorMessage("Nome"))}
-                                    placeholder="Nome"
+                                    placeholder="Email"
                                     id='name'
                                     autoComplete='off'
                                     className={errors.firstName ? 'error' : ''}
@@ -84,28 +84,15 @@ function MyForm() {
 
                             { /* Campo Sobrenome */}
                             <div className='form flex'>
-                                <label htmlFor='sobrenome'>Sobrenome</label>
+                                <label htmlFor='sobrenome'>CPF</label>
                                 <input
                                     {...register("lastName", generateErrorMessage("Sobrenome"))}
-                                    placeholder="Sobrenome"
+                                    placeholder="CPF"
                                     id='sobrenome'
                                     autoComplete='off'
                                     className={errors.lastName ? 'error' : ''}
                                 />
                                 {errors.lastName && <span className='error-message'>{errors.lastName.message}</span>}
-                            </div>
-
-                            { /* Campo E-mail */}
-                            <div className='form flex'>
-                                <label htmlFor='email'>E-mail</label>
-                                <input
-                                    {...register("email", generateErrorMessage("E-mail"))}
-                                    placeholder="E-mail"
-                                    id='email'
-                                    autoComplete='off'
-                                    className={errors.email ? 'error' : ''}
-                                />
-                                {errors.email && <span className='error-message'>{errors.email.message}</span>}
                             </div>
 
                             { /* Campo Senha */}
@@ -137,7 +124,7 @@ function MyForm() {
 
                             {/* Botão Enviar */}
                             <button className='btn' type="submit" disabled={status.loading}>
-                                {status.loading ? 'Enviando...' : 'Enviar'}
+                                {status.loading ? 'Enviando...' : 'Entrar'}
                             </button>
                         </form>
                         {status.loading && <p>Carregando...</p>}
