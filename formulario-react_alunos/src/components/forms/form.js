@@ -64,7 +64,7 @@ function MyForm() {
                     </div>
 
                     <section>
-                        <h1>Inscreva-se</h1>
+                        <h1>Login</h1>
 
                         {/* Formulário com campos controlados pelo hook useForm */}
                         <form onSubmit={handleSubmit(onSubmit)}>
